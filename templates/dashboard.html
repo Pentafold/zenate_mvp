@@ -44,8 +44,11 @@
         <div class="app-dashboard__survey-questions" id="survey_questions">
             <div id="solana_survey_box" class="app-dashboard__survey-box" hidden>
                 <p>How do you feel about Solana today?</p>
-                <button class="survey-buttons bullish" id="solana_bullish">Bullish</button>
-                <button class="survey-buttons bearish" id="solana_bearish">Bearish</button>
+                    <form>
+                        {% csrf_token %}
+                    </form>
+                    <button type="submit" class="survey-buttons bullish" id="solana_bullish">Bullish</button>
+                    <button class="survey-buttons bearish" id="solana_bearish">Bearish</button>
             </div>
             <div id="bitcoin_survey_box" class="app-dashboard__survey-box" hidden> 
                 <p>How do you feel about Bitcoin today?</p>

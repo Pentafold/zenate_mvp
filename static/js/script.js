@@ -107,6 +107,7 @@ survey_back.addEventListener('click', function(){
 })
 document.addEventListener("DOMContentLoaded", function(){
     dash_signals.style.display = 'none'
+    console.log('Document has finished loading.');
 });
 function getCookie(name) {
     let cookieValue = null;

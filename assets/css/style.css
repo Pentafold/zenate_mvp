@@ -27,6 +27,9 @@ body{
     display: flex;
     justify-content: space-around;
 }
+.app-dashboard__header-left{
+    width: 50%;
+}
 .app-dashboard__header-left-logo img{
     width: 20%;
 }
@@ -122,6 +125,11 @@ body{
     color: #fff;
 }
 
+@media(max-width: 1024px){
+    .app-dashboard__header-left-logo img {
+        width: 40%;
+    }
+}
 @media(max-width=768px){
     .app-dashboard__survey-box {
         width: 30%;
@@ -147,15 +155,17 @@ body{
         width: 50%;
     }
     .app-dashboard__header-left-logo img {
-        width: 40%;
+        width: 70%;
     }
     .app-dashboard__survey-box {
         width: 50%;
     }
+    .app-dashboard__header-left-balance {
+        width: 40%;
+    }
 }
 @media(max-width: 430px){
     .app-dashboard__header-left-balance {
-        width: 30%;
         padding: 20px;
         font-size: 13px;
     }

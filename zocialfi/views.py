@@ -10,7 +10,7 @@ balance = 0
 class AppDashboard(View):
     def get(self, request):
         response = render(request, 'dashboard.html', {'balance' : balance})
-        return response
+        return HttpResponse(response)
 class AppSurvey(View):
     def post(self, request):
         data = json.loads(request.body) 
