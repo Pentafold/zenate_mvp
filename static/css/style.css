@@ -1,0 +1,200 @@
+*{
+
+}
+
+body{
+ margin: 0;
+ padding: 0;
+ background-image: linear-gradient(#1e17ed, #0f0ba0);
+ height: 100vh;
+}
+
+#app-loader{
+    background: #042060 url('../images/preloader.gif') no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.app-dashboard{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.app-dashboard__header{
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.app-dashboard__header-left{
+    width: 50%;
+}
+.app-dashboard__header-left-logo img{
+    width: 20%;
+}
+.app-dashboard__header-left-balance{
+    margin-top: 20px;
+    width: 15%;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+    color: #fff;
+}
+.app-dashboard__header-right{
+    text-align: right;
+}
+.app-dashboard__header-right-connect button{
+    padding: 15px;
+    color: #000;
+    background-color: #fcc03d;
+    border-radius: 10px;
+    border: none;
+}
+.app-dashboard__header-right-earn{
+    margin-top: 20px;
+}
+/* .app-dashboard__header-right-earn button{
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #3d5afe;
+    border: none;
+} */
+.app-dashboard__content{
+    text-align: center;
+    margin-bottom: 10%;
+}
+.app-dashboard__content-text{
+    color: #fff;
+    margin-bottom: 30px;
+}
+.zocialfi_button{
+    color: #fff;
+    padding: 15px;
+    border: 4px solid transparent;
+    border-radius: 50em;
+    background: linear-gradient(180deg, #DEEBF7, #83b3df, #3c71ad, #002060d9) padding-box, 
+    linear-gradient(269deg, #DEEBF7, #3c71ad) border-box;
+}
+.zocialfi_button:active {
+    transform: translateY(2px);
+}
+.app-dashboard__survey{
+    text-align: center;
+    padding-bottom: 10%;
+    color: #fff;
+}
+.app-dashboard__survey-back{
+    margin-top: 50px;
+}
+.app-dashboard__survey-questions{
+    display: flex;
+    justify-content: center;
+}
+.app-dashboard__survey-box{
+    width: 20%;
+    padding: 20px;
+    background-color: #16018a;
+    border-radius: 10px;}
+.survey-buttons{
+    color: #fff;
+    padding: 10px;
+    width: 100px;
+    border-radius: 20px;
+}
+.bullish{
+    background-color: #168b27;
+}
+.bearish{
+    background-color: #b01000;
+}
+.app-dashboard__signals{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+.app-dashboard__signals-content{
+    width: 350px;
+    border-radius: 10px;
+    background-color: #16018a;
+    padding: 20px;
+}
+#display_signals{
+    color: #fff;
+}
+
+@media(max-width: 1024px){
+    .app-dashboard__header-left-logo img {
+        width: 40%;
+    }
+}
+@media(max-width=768px){
+    .app-dashboard__survey-box {
+        width: 30%;
+    }
+}
+@media(max-width=640px){
+    .app-dashboard__survey-box {
+        width: 40%;
+    }
+    .app-dashboard__header-right {
+        width: 40%;
+    }
+    .app-dashboard__header-left-logo img {
+        width: 40%;
+    }
+    .app-dashboard__header-left-balance {
+        width: 25%;
+    }
+    
+}
+@media(max-width:540px){
+    .app-dashboard__header-right {
+        width: 50%;
+    }
+    .app-dashboard__header-left-logo img {
+        width: 70%;
+    }
+    .app-dashboard__survey-box {
+        width: 50%;
+    }
+    .app-dashboard__header-left-balance {
+        width: 40%;
+    }
+}
+@media(max-width: 430px){
+    .app-dashboard__header-left-balance {
+        padding: 20px;
+        font-size: 13px;
+    }
+    .zocialfi_button {
+        padding: 12px;
+        font-size: 12px;
+    }
+    .app-dashboard__header-right-connect button {
+        padding: 12px;
+        font-size: 12px;
+    }
+    .app-dashboard__header-right {
+        width: 70%;
+    }
+}
+@media(max-width: 375px){
+    .app-dashboard__header-left-balance {
+        width: 40%;
+        padding: 12px;
+        font-size: 13px;
+    }
+    .app-dashboard__header-left-logo img {
+        width: 50%;
+    }
+    .zocialfi_button {
+        padding: 10px;
+        font-size: 11px;
+    }
+    .app-dashboard__signals-content {
+        width: 285px;
+    }
+}

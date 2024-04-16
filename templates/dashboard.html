@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="app-loader"></div>
+<div class="app-dashboard">
+    <div class="app-dashboard__header">
+        <div class="app-dashboard__header-left">
+            <div class="app-dashboard__header-left-logo">
+                <img src='../static/images/logo.png'>
+            </div>
+            <div class="app-dashboard__header-left-balance">
+                ZNT Balance:<br>
+                <span id="znt_balance">{{balance}}</span> ZNT
+            </div>
+        </div>
+        <div class="app-dashboard__header-right">
+            <div class="app-dashboard__header-right-connect">
+                <button>Connect MetaMask</button>
+            </div>
+            <div class="app-dashboard__header-right-earn">
+                <button id="earn_znt" class="zocialfi_button">Earn ZNT</button>
+            </div>
+        </div>
+    </div>
+    <div class="app-dashboard__content" id="dash_content">
+        <div class="app-dashboard__content-text">
+            Get a Signal
+        </div>
+        <div class="app-dashboard__content-spend">
+            <button id="spend_znt" class="zocialfi_button" {% if balance == 0 %} disabled {% endif %}>Spend 10 ZNT?</button>
+        </div>
+    </div>
+    <div class="app-dashboard__survey" id="dash_survey" hidden>
+        <div id="survey_eligibility" class="app-dashboard__survey-eligibility">
+            <div class="app-dashboard__survey-eligibility-buttons">
+                <h3>Your Eligibility Survey</h3>
+                <button id="solana_survey" class="zocialfi_button">Solana Sentiment</button>
+                <button id="bitcoin_survey" class="zocialfi_button">Bitcoin Sentiment</button>
+            </div>
+            <div class="app-dashboard__survey-back">
+                <button id="survey_back" class="zocialfi_button">Go Back</button>
+            </div>
+        </div>
+        <div class="app-dashboard__survey-questions" id="survey_questions">
+            <div id="solana_survey_box" class="app-dashboard__survey-box" hidden>
+                <p>How do you feel about Solana today?</p>
+                <button class="survey-buttons bullish" id="solana_bullish">Bullish</button>
+                <button class="survey-buttons bearish" id="solana_bearish">Bearish</button>
+            </div>
+            <div id="bitcoin_survey_box" class="app-dashboard__survey-box" hidden> 
+                <p>How do you feel about Bitcoin today?</p>
+                <button class="survey-buttons bullish" id="bitcoin_bullish">Bullish</button>
+                <button class="survey-buttons bearish" id="bitcoin_bearish">Bearish</button>
+            </div>
+        </div>
+    </div>
+    <div class="app-dashboard__signals" id="dash_signals">
+        <div class="app-dashboard__signals-content">
+            <span id="display_signals"></span>
+            <button class="zocialfi_button">Copy Trade?</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
