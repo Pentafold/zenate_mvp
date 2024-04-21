@@ -27,10 +27,10 @@ SECRET_KEY = 'django-insecure-2)j73g3zy8@g#aumfkfxuc8ns193rg#no-b^h_@mu^iw@d3zjn
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'zocialfi.co.uk',
+    'www.zocialfi.co.uk',
     '51.20.103.247',
     '127.0.0.1',
-    'localhost',
-    'zocialfi.co.uk',
 ]
 
 
