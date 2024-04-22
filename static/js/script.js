@@ -17,6 +17,8 @@ var bitcoin_bullish = document.getElementById("bitcoin_bullish")
 var bitcoin_bearish = document.getElementById("bitcoin_bearish")
 var znt_balance = document.getElementById("znt_balance")
 var survey_back = document.getElementById("survey_back")
+var copy_trade = document.getElementById('copy_trade')
+var metamask = document.getElementById('metamask')
 var balance = 0
 var jsonData = {}
 setTimeout(() => {
@@ -37,6 +39,7 @@ spend_znt.addEventListener('click', function(){
 earn_znt.addEventListener('click', function(){
     dash_content.style.display = 'none'
     dash_survey.style.display = 'block'
+    dash_signals.style.display = 'none'
 })
 
 solana_survey.addEventListener('click', function(){
@@ -109,6 +112,9 @@ document.addEventListener("DOMContentLoaded", function(){
     dash_signals.style.display = 'none'
     console.log('Document has finished loading.');
 });
+copy_trade.addEventListener('click', function(){
+    metamask.innerHTML = 'Coming Soon'
+})
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -156,7 +162,9 @@ function makeGetSignalRequest(url){
         })
         .then(response => response.json())
         .then(data => {
+            balance = balance - 10
             display_signals.innerHTML = data.signal
+            znt_balance.innerHTML = balance
             console.log('Success:', data);
         })
         .catch((error) => {
