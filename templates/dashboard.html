@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div id="app-loader"></div>
+<div id="app-loader">
+    <img id="app-loader-img" src="../static/images/loading_logo.png" alt="loading logo">
+</div>
 <div class="app-dashboard">
     <div class="app-dashboard__header">
         <div class="app-dashboard__header-left">
@@ -9,8 +11,9 @@
                 <img src='../static/images/logo.png'>
             </div>
             <div class="app-dashboard__header-left-balance">
-                ZNT Balance:<br>
-                <span id="znt_balance">{{balance}}</span> ZNT
+                <img id="coin_logo" src="../static/images/coin_logo.png">
+                :
+                <span id="znt_balance"> &nbsp;<b>{{balance}}</b></span>&nbsp;<b>ZNT</b>
             </div>
         </div>
         <div class="app-dashboard__header-right">
