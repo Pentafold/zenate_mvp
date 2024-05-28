@@ -140,9 +140,21 @@ body{
     background-color: #16018a;
     padding: 20px;
 }
+.signals-div{
+    margin-bottom: 20px;
+}
+.copy-button{
+    display: flex;
+    justify-content: space-between;
+}
 #display_signals{
     font-family: zenate-font;
-    color: #fff;
+    color: #ffffff;
+}
+#last_update{
+    font-family: zenate-font;
+    color: #ffffff;
+    align-content: center;
 }
 @media(max-width: 2560px){
     #app-loader-img {

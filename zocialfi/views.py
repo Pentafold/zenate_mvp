@@ -19,5 +19,5 @@ class AppSurvey(View):
 class AppSignal(View):
     def get(self, request):
         signal = Signal.objects.all().order_by('-date').first()
-        data = json.dumps({'signal': signal.signal})
+        data = json.dumps({'signal': signal.signal, 'last_update': signal.date.strftime("%d/%m/%Y")})
         return HttpResponse(data, status=200)

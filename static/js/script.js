@@ -19,6 +19,7 @@ var znt_balance = document.getElementById("znt_balance")
 var survey_back = document.getElementById("survey_back")
 var copy_trade = document.getElementById('copy_trade')
 var metamask = document.getElementById('metamask')
+var last_update = document.getElementById('last_update')
 var balance = 0
 var jsonData = {}
 setTimeout(() => {
@@ -165,6 +166,7 @@ function makeGetSignalRequest(url){
             balance = balance - 10
             display_signals.innerHTML = data.signal
             znt_balance.innerHTML = balance
+            last_update.innerHTML = 'Last Updated: '+ data.last_update
             console.log('Success:', data);
         })
         .catch((error) => {
